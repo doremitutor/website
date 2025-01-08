@@ -32,8 +32,10 @@
 					localStorage.setItem('lang', lang);
 				}
 				let fileName=lang==='es'?'bienvenidos':'welcome';
-				//change to .com before uploading
-				let requestURI=`https://doremitutor.net/${lang}/${fileName}`;
+				//change to .com before uploading...
+				//let requestURI=`https://doremitutor.net/${lang}/${fileName}`;
+				//...or to github page server
+				requestURI=`https://doremitutor.github.io/${lang}/${fileName}`;
 				window.location.href = requestURI;
 			})();
 		</script>

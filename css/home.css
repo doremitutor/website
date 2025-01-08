@@ -1,0 +1,313 @@
+body {
+	grid-template-areas:
+		"heroContent heroContent"
+		"sectionsMenuWrapper sectionsMenuWrapper"
+		"main main"
+		"additionalReadingsWrapper additionalReadingsWrapper"
+		"picturePanel picturePanel"
+		"footer footer";
+}
+#heroImage {
+	display:block;
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	background-position:center;
+	background-color:#b7dde8;
+	background-image:linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url("/images/Lesson195-980x500.png");
+	background-position:0% 2%;
+	background-repeat:repeat-y;
+	z-index:0;
+}
+#heroContent {
+	grid-area:heroContent;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	align-items:center;
+	width:100%;
+	padding:2rem 0.5rem 0.8rem;
+	z-index:1;
+}
+#heroImage,
+#heroContent {
+	height:1350px;
+}
+#logoAndLangWrapper {
+	position:absolute;
+	top:0.25rem;
+	flex-direction:row;
+	justify-content:space-between;
+	align-items:flex-start;
+	padding:0 0.25rem;
+	width:100%;
+	z-index:2;
+}
+#heroText_es,
+#heroText_en {
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	padding-bottom:0.5rem;
+	color:white;
+	width:100%;
+	height:1030px;
+}
+#heroText_es h1,
+#heroText_en h1 {
+	font-size:1.25em;
+	font-weight:200;
+	line-height:1.2em;
+	text-align:left;
+}
+#heroText_es p,
+#heroText_en p {
+	font-size:1.03em;
+	font-weight:100;
+	text-align:left;
+}
+#callToAction_es,
+#callToAction_en {
+	display:grid;
+	grid-template-columns:49.75% 49.75%;
+	grid-template-rows:auto;
+	width:100%;
+	margin-bottom:0;
+	gap:0.1em;
+}
+#callToAction_es li,
+#callToAction_en li {
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	justify-items:center;
+	align-items:stretch;
+	width:100%;
+}
+#callToAction_es a,
+#callToAction_en a {
+	padding:0.2rem 0;
+	width:100%;
+	text-decoration:none;
+}
+#encouragement {
+	display:flex;
+	flex-direction:column;
+	gap:0.1rem;
+	padding-bottom:0.5rem;
+}
+#encouragement p {
+	text-align:left;
+}
+#introCards {
+	display:flex;
+	flex-direction:column;
+	justify-content:start;
+	align-items:center;
+	gap:0.5rem;
+	line-height:normal;
+}
+#introCards li {
+	margin:0;
+}
+#introCards a,
+#introCards a:visited {
+	color:var(--dark-color);
+	text-decoration:none;
+}
+#introCards div {
+	display:flex;
+	flex-direction:column;
+	justify-content:start;
+	align-items:center;
+	padding:0;
+	height:7.7rem;
+}
+#introCards h2 {
+	font-size:1.3rem;
+	margin:0 auto;
+	font-weight:500;
+	text-align:center;
+}
+
+#introCards p {
+	margin:0;
+	padding:0 0.5rem;
+	text-align:center;
+}
+@media screen and (max-width:980px) and (orientation:landscape) {
+	#heroImage {
+		height:500px;
+		background-repeat:no-repeat;
+	}
+	#logoAndLangWrapper {
+		flex-direction:column;
+		justify-content:space-between;
+		align-items:flex-end;
+		width:unset;
+		right:0.5rem;
+		gap:0.1rem;
+	}
+	#heroContent {
+		flex-direction:row;
+		height:500px;
+		padding-top:0;
+		padding-bottom:0;
+	}
+	#heroText_es,
+	#heroText_en {
+		justify-content:space-around;
+		align-items:flex-start;
+		width:22rem;
+		height:100%;
+	}
+	#heroText_es h1,
+	#heroText_en h1 {
+		margin-top:unset;
+		line-height:1.2em;
+	}
+	#callToAction_es,
+	#callToAction_en {
+		display:flex;
+		flex-direction:column;
+		align-self:flex-end;
+		justify-content:flex-end;
+		align-items:stretch;
+		width:10rem;
+		margin-bottom:3em;
+	}
+	#callToAction_es a,
+	#callToAction_en a {
+		font-size:0.9rem;
+	}
+	#introCards {
+		display:grid;
+		grid-template-columns:1fr 1fr;
+		grid-template-rows:auto;
+		grid-auto-flow:row;
+		gap:10px;
+	}
+	#introCards div {
+		width:unset;
+		height:9.1rem;
+		margin:0;
+		/* width:var(--width); */
+	}
+}
+@media screen and (min-width:981px) {
+	body {
+		grid-template-areas:
+			" heroContent heroContent heroContent heroContent "
+			" . sectionsMenuWrapper sectionsMenuWrapper . "
+			" . main main . "
+			" . additionalReadingsWrapper additionalReadingsWrapper . "
+			" . picturePanel picturePanel . "
+			" footer footer footer footer ";
+	}
+	#heroImage {
+		height:500px;
+		background-position:center;
+		background-repeat:no-repeat;
+	}
+	#heroContent {
+		flex-direction:row;
+		justify-content:space-between;
+		justify-content:space-around;
+		align-items:center;
+		font-size:1.75rem;
+		width:100%;
+		height:500px;
+		padding:0;
+	}
+	#logoAndLangWrapper {
+		flex-direction:column;
+		justify-content:space-between;
+		align-items:flex-end;
+		width:unset;
+		padding:0;
+		right:calc((100vw - 980px)/4);
+		gap:0.2rem;
+	}
+	#heroText_es,
+	#heroText_en {
+		flex-direction:column;
+		justify-content:space-between;
+		align-items:flex-start;
+		width:720px;
+		height:100%;
+		color:white;
+	}
+	#heroText_es h1,
+	#heroText_en h1 {
+		font-size:1.25em;
+		text-align:left;
+	}
+	#heroText_es p,
+	#heroText_en p {
+		font-size:1.03em;
+		text-align:left;
+	}
+	#callToAction_es,
+	#callToAction_en {
+		align-self:flex-end;
+		display:flex;
+		flex-direction:column;
+		gap:0.5rem;
+		margin-bottom:1rem;
+		width:240px;
+	}
+	#callToAction_es a,
+	#callToAction_en a {
+		font-size:1.45rem;
+	}
+	#introCards {
+		display:grid;
+		grid-template-columns:1fr 1fr;
+		grid-template-rows:repeat(3, 125px);
+		margin:0.5rem 0 0;
+		gap:0.5rem;
+	}
+	#introCards li {
+		height:100%;
+	}
+	#introCards div {
+		width:100%;
+		height:100%;
+		border-width:4px;
+		margin:0;
+	}
+}
+@media screen and (min-width:1366px) {
+	body {
+		grid-template-areas:
+			" heroContent heroContent heroContent heroContent heroContent heroContent "
+			" . sectionsMenuWrapper sectionsMenuWrapper . asidePanelRight . "
+			" . main main . asidePanelRight ."
+			" . additionalReadingsWrapper additionalReadingsWrapper . asidePanelRight . "
+			" footer footer footer footer footer footer ";
+	}
+	#additionalReadingsWrapper {
+		grid-area:additionalReadingsWrapper;
+	}
+}
+@media screen and (min-width:1920px) {
+	body {
+		grid-template-areas:
+			" heroContent heroContent heroContent heroContent heroContent heroContent heroContent heroContent "
+			" . asidePanelLeft . sectionsMenuWrapper sectionsMenuWrapper . asidePanelRight . "
+			" . asidePanelLeft . main main . asidePanelRight . "
+			" footer footer footer footer footer footer footer footer ";
+	}
+	#additionalReadingsWrapper {
+		grid-area:asidePanelLeft;
+		margin-top:unset;
+		height:200px;
+	}
+	#additionalReadingsWrapper menu {
+		justify-content:space-around;
+		flex-direction:column;
+		padding-left:2rem;
+		height:100%;
+	}
+}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es-us" id="html">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+		<title>Remember Es</title>
+		<script>
+			(function(){
+				try{
+					let lang='es';
+					localStorage.setItem('lang', 'es');
+					//alert('"'+lang+'" remembered!');
+				}catch(error){
+					//alert('Sorry, LocalStorage seems disabled,\nunable to remember anything :(\n'+error);
+				}
+			})();
+		</script>
+	</head>
+    <body></body>
+</html>

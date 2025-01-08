@@ -1,0 +1,5 @@
+#AuthType Basic
+#AuthName "By Invitation Only"
+#AuthBasicProvider file
+#AuthUserFile D:/Apache1/passwords
+#Require valid-user

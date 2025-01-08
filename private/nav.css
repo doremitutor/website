@@ -1,0 +1,364 @@
+@media screen and (max-width:980px){
+	#navWrapper{
+		position:fixed;
+		top:0px;
+		left:0px;
+		z-index: 1;
+	}
+	#sectionsList, #navFigure{
+		display:none;
+	}
+	#navFigure{
+		position:absolute;
+		top:0px;
+		left:0px;
+		background-color: var(--dark-color);
+		width:100vw;
+		height:2.6rem;
+		overflow: hidden;
+	}
+	#navLogo{
+		position:absolute;
+		top:0px;
+		right:20px;
+		height:2.6rem;
+	}
+	#sectionsList{
+		flex-direction: column;
+		align-content: stretch;
+		justify-content: space-between;
+		background-color: var(--dark-color);
+		width:100vw;
+		height:calc(100vh - 2.6rem);
+		position:fixed;
+		top:2.6rem;
+		padding-top:1rem;
+		padding-bottom:5rem;
+		overflow: scroll;
+	}
+	/***** main checkBox internals starts *****/
+	#navCheckBoxLabel{
+		display:flex;
+		flex-direction:column;
+		justify-content:space-between;
+		align-items: center;
+		position:fixed;
+		top:0.1rem;
+		left:8px;
+		width: 3.2rem;
+		height:2.4rem;
+		cursor: pointer;
+		z-index: 10;
+	}
+	#navCheckBox:checked ~ #navFigure{
+		display:block;
+	}
+	#navCheckBox:checked ~ #sectionsList{
+		display:flex;
+	}
+	#navCheckBoxLabel::before, #navCheckBoxLabel::after{
+		content:'';
+	}
+	#navCheckBoxLabel span, #navCheckBoxLabel::before, #navCheckBoxLabel::after{
+		width: 100%;
+		height: 20%;
+		box-sizing: border-box;
+		background-color: rgba(58, 43, 28, 0.3);
+		border: 0.5vmin solid rgba(255, 204, 153, 0.5);
+		border-radius: 0.4rem;
+	}
+	#navCheckBox:checked ~ #navCheckBoxLabel span, #navCheckBox:checked ~ #navCheckBoxLabel::before, #navCheckBox:checked ~ #navCheckBoxLabel::after{
+		background-color: rgba(255, 204, 153, 0.5);
+		border: 0.5vmin solid rgba(58, 43, 28, 0.6);
+	}
+	#navCheckBox:checked ~ #navCheckBoxLabel span{
+		display:none;
+	}
+	#navCheckBox:checked ~ #navCheckBoxLabel::before{
+		transform:translate(0, 0.95rem) rotate(45deg);
+	}
+	#navCheckBox:checked ~ #navCheckBoxLabel::after{
+		transform:translate(0, -0.95rem) rotate(-45deg);
+	}
+	/***** main checkBox internals ends *****/
+	#navWrapper a{
+		font-size: 1.2rem;
+		padding-left: 0.2rem;
+		line-height: 1.7rem;
+		text-decoration: underline;
+	}
+	.sectionLi{
+		position:relative;
+	}
+	.sectionTitle{
+		color:var(--light-color);
+		display:block;
+		font-size: 1.2rem;
+		line-height: 2rem;
+		text-align:center;
+		text-decoration: underline;
+		text-transform: uppercase;
+		margin-bottom:-0.2rem;
+	}
+	.sectionHeader{
+		color:var(--light-color);
+		background-color:var(--subdark-color);
+		font-size: 1.15rem;
+		text-align:center;
+	}
+	.listHeader{
+		color:var(--light-color);
+		background-color:var(--subdark2-color);
+		font-size: 1.25rem;
+		display:block;
+		position:relative;
+		text-align:center;
+	}
+	.keyHeader{
+		color:var(--light-color);
+		background-color:var(--subdark2-color);
+		font-size: 1.5rem;
+		position:relative;
+		display:block;
+		text-align:center;
+	}
+	.subjectHeader{
+		color:var(--dark-color);
+		background-color: var(--light-color);
+		display:block;
+		position:relative;
+		font-size:1.4rem;
+		font-weight:bold;
+		text-align:center;
+	}
+	.linksList, .linkLi, .measureLi{
+		background-color: var(--bg-color);
+	}
+	.sectionCheckBoxLabel, .subSectionCheckBoxLabel, .keyHeaderCheckBoxLabel{
+		display:flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: center;
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:1.75rem;
+	}
+	.sectionCheckBoxLabel > span:first-child, .subSectionCheckBoxLabel > span:first-child, .keyHeaderCheckBoxLabel > span:first-child{
+		color:var(--light-color);
+		font-size: 3rem;
+	}
+	.sectionCheckBoxLabel > span:first-child{
+		transform: rotate(90deg);
+	}
+	.subSectionCheckBoxLabel > span:first-child{
+		transform: translateY(-0.2rem) rotate(90deg) translateY(2rem);
+	}
+	.keyHeaderCheckBoxLabel > span:first-child{		font-size: 3rem;
+		transform: translateY(-0.2rem) rotate(90deg) translateY(2rem);
+	}
+	.sectionCheckBoxLabel > span:last-child, .subSectionCheckBoxLabel > span:last-child, .keyHeaderCheckBoxLabel > span:last-child{
+		display:none;
+	}
+	.sectionCheckBoxLabel > span:last-child{
+		color:var(--light-color);
+		font-size: 2.6rem;
+		transform: translateY(-0.1rem);
+	}
+	.subSectionCheckBoxLabel > span:last-child{
+		font-size: 2.5rem;
+		transform: translate(-2.28rem, -0.35rem);
+		display:none;
+	}
+	.keyHeaderCheckBoxLabel > span:last-child{
+		font-size: 2.6rem;
+		transform: translate(-2.25rem, -0.32rem);
+		display:none;
+	}
+	.checkBox:checked ~ .sectionCheckBoxLabel > span:first-child,
+	.checkBox:checked + h4 .subSectionCheckBoxLabel > span:first-child,
+	.checkBox:checked + .keyHeader .keyHeaderCheckBoxLabel > span:first-child{
+		display:none;
+	}
+	.checkBox:checked ~ .sectionCheckBoxLabel > span:last-child,
+	.checkBox:checked + h4 .subSectionCheckBoxLabel > span:last-child,
+	.checkBox:checked + .keyHeader .keyHeaderCheckBoxLabel > span:last-child{
+		display:block;
+	}
+	.sectionDiv, .subSectionLi, .measureList{
+		display:none;
+	}
+	.checkBox:checked ~ .sectionDiv, .checkBox:checked + h4 ~ .subSectionLi, .checkBox:checked ~ .subjectsPanelDiv .measureList /*  > .contentsDivdiv .linkLi */{
+		display:block;
+	}
+}
+@media screen and (min-width:981px){
+	#navWrapper{
+		grid-area:navWrapper;
+		display:flex;
+		width:980px;
+		flex-direction:row;
+		align-content:stretch;
+		background-color: var(--dark-color);
+		margin:6px 0px;
+	}
+	#navWrapper > ul{
+		display:flex;
+		flex-direction:row;
+		justify-content:space-between;
+		width:100%;
+		border:1px solid var(--dark-color);
+		border-bottom:none;
+	}
+	.sectionLi{
+		position:relative;
+		padding: 0 0.5rem;
+	}
+	#navWrapper li.sectionLi > span{
+		white-space: nowrap;
+		color:var(--bg-color);
+	}
+	#navWrapper h4{
+		white-space:nowrap;
+	}
+	#navWrapper li.sectionLi:hover{
+		background-color: var(--bg-color);
+	}
+	#navWrapper li.sectionLi:hover > span{
+		color:var(--dark-color);
+	}
+	#navWrapper div.sectionDiv{
+		position:absolute;
+		top:100%;
+		height:0px;
+		background-color:var(--bg-color);
+		overflow:hidden;
+		padding:0px 1rem;
+		border-width:1px;
+		border-top-width:0px;
+		border-bottom-width:0px;
+		border-style: solid;
+		border-color: var(--dark-color);
+	}
+	#navWrapper li.sectionLi:hover div.sectionDiv{
+		border-bottom-width:1px;
+		pointer-events:auto;
+	}
+	#navWrapper li.linkLi{
+		padding: 0;
+		font-size: 0.9rem;
+		line-height:1.3rem;
+	}
+	#navWrapper li.linkDiv:hover{
+		background-color: var(--dark-color);
+	}
+	#navWrapper li.linkDiv:hover a{
+		color: var(--bg-color);
+	}
+	#navWrapper div.contentsDiv{
+		display:flex;
+		flex-direction:row;
+		justify-content: space-between;
+		min-width:100%;
+	}
+	#startingLi > div{
+		left:-1px;
+	}
+	#theoryLi > div{
+		width:980px;
+	}
+	#gamesLi > div{
+		right:-1px;
+	}
+	#solfegeTrebleLi > div{
+		width:980px;
+	}
+	#solfegeBassLi > div{
+		width:980px;
+	}
+	/* #followersLi > div{
+		right: -1px;
+	}
+	#followersLi li{
+		text-align: right;
+	} */
+	#navWrapper #solfegeTrebleLi div.sectionDiv, #navWrapper #solfegeBassLi .sectionDiv{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	#solfegeTrebleLi .contentDiv, #solfegeBassLi .contentDiv{
+		position:relative;
+	}
+	.keyPanelDiv{
+		display:flex;
+		flex-grow: 1;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+	.keyPanelDiv span{
+		padding:0 0.5rem;
+		margin-top:0.2rem;
+		text-align: center;
+		border:1px solid var(--dark-color);
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+		color: var(--bg-color);
+		background-color: var(--dark-color);
+	}
+	.keyPanelDiv span.selected{
+		color: var(--dark-color);
+		background-color: var(--bg-color);
+		border-bottom:none;
+
+	}
+	.subjectsPanelDiv{
+		position:absolute;
+		border:1px solid var(--dark-color);
+		border-top:none;
+		height:auto;
+		padding-bottom: 0.2rem;
+		width:978px;
+		top: 50px;
+		left:0px;
+		z-index:0;
+		display:none;
+		justify-items: center;
+		align-items: start;
+		justify-content: stretch;
+		align-content: start;
+		grid-template-columns: 25% 25% 25% 25%;
+		gap: 0 0;
+		grid-auto-flow: row;
+	}
+	.subjectsPanelDiv li{
+		text-align: center;
+		font-size: 0.9rem;
+	}
+	#navWrapper a{
+		text-decoration: underline;
+		white-space: nowrap;
+	}
+	#navWrapper h3{
+		margin:0.3rem 1.5rem 0;
+		padding:0px;
+		text-align: center;
+		font-size: 0.9rem;
+		font-weight: bold;
+		white-space: nowrap;
+	}
+	#navWrapper h4{
+		font-size: 0.85rem;
+		font-weight: bold;
+		text-align: center;
+		white-space: nowrap;
+		margin-top:4px;
+	}
+	#navWrapper h5{
+		font-size: 0.8rem;
+		font-weight: bold;
+		text-align: center;
+		white-space: nowrap;
+		margin-top:4px;
+	}
+}

@@ -1,0 +1,109 @@
+#playerGrid{
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr;
+	grid-template-rows:auto 80px 80px 90px;
+	grid-row-gap:10px;
+	justify-items:center;
+	align-items:center;
+	margin-bottom:20px;
+	grid-template-areas:
+		"playerCanvas playerCanvas playerCanvas"
+		"rw replay play"
+		"tune tempoGridCell metroVolGridCell"
+		"optionsGridCell optionsGridCell optionsGridCell";
+}
+#playerCanvas{
+	margin:0px;
+	display:block;
+	box-sizing:content-box;
+	background-image:url("../../images/staffPaper952x450.svg");
+	background-repeat:no-repeat;
+	color:var(--dark-color);
+	padding:0;
+	border:4px solid var(--dark-color);
+	/* border-radius:15px; */
+	/* z-index:2; */
+	grid-area:playerCanvas;
+	letter-spacing:1px;
+}
+#rw{grid-area:rw;}
+#replay{grid-area:replay;}
+#play{grid-area:play;}
+#tune{grid-area:tune;}
+#tempoGridCell{grid-area:tempoGridCell;}
+#metroVolGridCell{grid-area:metroVolGridCell;}
+#optionsGridCell{justify-self:stretch;
+	align-self:stretch;
+	grid-area:optionsGridCell;
+}
+#playerGrid button{
+	font-size:28px;
+	font-weight:bold;
+	width:312px;
+	height:80px;
+	border-radius:10px;
+}
+#playerGrid button:disabled{
+	font-weight:normal;
+	color:#999;
+}
+#playerGrid label, #playerGrid span{
+	font-size:24px;
+	font-weight:bold;
+}
+#tempoGridCell, #metroVolGridCell{
+	line-height:28px;
+	width:312px;
+	align-self:stretch;
+}
+#tempo, #metroVol{
+	color:var(--dark-color);
+	width:280px;
+}
+#optionsGridCell{
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr 1fr;
+	justify-content:center;
+	align-items:stretch;
+}
+#tempoGridCell, #metroVolGridCell, #optionsGridCell div{
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	align-items:center;
+}
+#optionsGridCell input{
+	 transform:translate(0, -20px) scale(3.5);
+}
+#playerDetails{
+	line-height: 1.5;
+	margin-bottom: 0.5rem;
+
+}
+#playerDetails *{
+	text-align:left;
+}
+#playerDetails p{
+	margin:0;
+}
+#playerDetails summary{
+	padding-left:0;
+	font-weight:600;
+}
+#playerDetails div{
+	padding-left:1rem;
+	margin-bottom: 0.5rem;
+}
+#detailsAside h4{
+	display:inline;
+}
+#detailsAside summary{
+	padding-left:0.5rem;
+	text-align: left;
+	/* list-style: inside disclosure-closed; */
+}
+@media screen and (min-width:1366px){
+	#playerDetails{
+		padding-right:5.5rem;
+	}
+}

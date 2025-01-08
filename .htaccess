@@ -1,0 +1,20 @@
+#AuthType Basic
+#AuthName "By Invitation Only"
+#AuthBasicProvider file
+#AuthUserFile D:/Apache1/passwords
+#Require valid-user
+<IfModule dir_module>
+    DirectoryIndex index.html index.php
+</IfModule>
+<IfModule headers_module>
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma no-cache
+    Header set Expires 0
+</IfModule>
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^\.]+)$ $1.html

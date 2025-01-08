@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es-us" id="html">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="admin.css">
+		<script src="connectionHandler.js"></script>
+		<title>Doremitutor CMS</title>
+	</head>
+	<body>
+		<h1>Doremitutor CMS</h1>
+		<h2>Page creation and edition</h2>
+		<div class="flexWrapperRow sectionHeader">
+			<div class="consecutive">
+				<div class="flexWrapperRow">
+					<label for="consecutive">No.</label>
+				</div>
+				<div class="flexWrapperCol">
+					<input type="text" id="consecutive">
+				</div>
+			</div>
+			<div class="ordertype">
+				<div class="flexWrapperRow">
+					<label for="ordertype">Type</label>
+				</div>
+				<div class="flexWrapperCol">
+					<input type="text" list="ordertypeList" id="ordertype">
+					<datalist id="ordertypeList">
+						<option>FIRST</option>
+						<option>INTER</option>
+						<option>LAST</option>
+						<option>SINGLE</option>
+					</datalist>
+				</div>
+			</div>
+			<div class="previous">
+				<div class="flexWrapperRow">
+					<label for="previous">Prev</label>
+				</div>
+				<div class="flexWrapperCol">
+					<input type="text" id="previous">
+				</div>
+			</div>
+			<div class="next">
+				<div class="flexWrapperRow">
+					<label for="next">Next</label>
+				</div>
+				<div class="flexWrapperCol">
+					<input type="text" id="next">
+				</div>
+			</div>
+			<div class="lesson">
+				<div class="flexWrapperRow">
+					<label for="lesson">Player Lesson</label>
+				</div>
+				<div class="flexWrapperCol">
+					<input type="text" id="lesson">
+				</div>
+			</div>
+				<button class="showPages" id="showPages">Show existing<br>pages</button>
+				<button class="getNextPrev" id="getNextPrev">Get next/<br>(Ctrl) prev page</button>
+				<button class="deletePage" id="deletePage">Delete<br>page</button>
+				<button class="changeConsecutive" id="changeConsecutive">Change<br>consecutive</button>
+				<button class="applyPage" id="applyPage">Insert/<br>Update page</button>
+
+		</div>
+		<table class="pages">
+			<thead>
+				<tr>
+					<th class="pageVariables">Variable</th>
+					<th class="pageES">Spanish</th>
+					<th class="pageEN">English</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>Path</th>
+					<td>
+						<input type="text" id="path_es">
+					</td>
+					<td>
+						<input type="text" id="path_en">
+					</td>
+				</tr>
+				<tr>
+					<th>Title</th>
+					<td>
+						<input type="text" id="title_es">
+					</td>
+					<td>
+						<input type="text" id="title_en">
+					</td>
+				</tr>
+				<tr>
+					<th>Main Header</th>
+					<td>
+						<input type="text" id="header_es">
+					</td>
+					<td>
+						<input type="text" id="header_en">
+					</td>
+				</tr>
+				<tr>
+					<th>Main Subheader</th>
+					<td>
+						<input type="text" id="subheader_es">
+					</td>
+					<td>
+						<input type="text" id="subheader_en">
+					</td>
+				</tr>
+				<tr>
+					<th>YouTube Video</th>
+					<td>
+						<input type="text" id="youtube_es">
+					</td>
+					<td>
+						<input type="text" id="youtube_en">
+					</td>
+				</tr>
+				<tr>
+					<th>HeadExtras</th>
+					<td>
+						<textarea class="short" id="headextras_es"></textarea>
+					</td>
+					<td>
+						<textarea class="short" id="headextras_en"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<th>Keywords</th>
+					<td>
+						<textarea class="short" id="keywords_es"></textarea>
+					</td>
+					<td>
+						<textarea class="short" id="keywords_en"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<th>Description</th>
+					<td>
+						<textarea class="short" id="description_es"></textarea>
+					</td>
+					<td>
+						<textarea class="short" id="description_en"></textarea>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<h2>HTML block creation and edition</h2>
+		<div class="flexWrapperRow sectionHeader">
+			<div class="htmlBlock">
+				<label>HTML block name</label>
+				<div class="flexWrapperCol">
+					<input type="text" id="blockName">
+				</div>
+			</div>
+			<button class="showBlocks" id="showBlocks">Show existing blocks</button>
+			<button class="deleteBlock" id="deleteBlock">Delete block</button>
+			<button class="changeBlockName" id="changeBlockName">Change<br>block name</button>
+			<button class="applyBlock" id="applyBlock">Insert/Update block</button>
+		</div>
+		<table class="htmlBlocks">
+			<thead>
+				<tr>
+					<th class="blockES">Spanish</th>
+					<th class="blockEN">English</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<textarea class="large" id="blockContent_es"></textarea>
+					</td>
+					<td>
+						<textarea class="large" id="blockContent_en"></textarea
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<h2>Summary creation and edition</h2>
+		<div class="flexWrapperRow sectionHeader">
+			<div class="summary">
+				<label>Summary name</label>
+				<div class="flexWrapperCol">
+					<input type="text" id="summaryName">
+				</div>
+			</div>
+			<button class="showSummaries" id="showSummaries">Show existing summaries</button>
+			<button class="deleteSummary" id="deleteSummary">Delete summary</button>
+			<button class="changeSummaryName" id="changeSummaryName">Change<br>summary name</button>
+			<button class="applySummary" id="applySummary">Insert/Update summary</button>
+		</div>
+		<table class="summaries">
+			<thead>
+				<tr>
+					<th class="summaryES">Spanish</th>
+					<th class="summaryEN">English</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="summaryElem">
+					<th colspan="2" class="double">Resume</th>
+				</tr>
+				<tr>
+					<td>
+						<textarea class="short" id="summary_es"></textarea>
+					</td>
+					<td>
+						<textarea class="short" id="summary_en"></textarea
+					</td>
+				</tr>
+				<tr class="summaryParagraph">
+					<th colspan="2" class="double">Paragraph</th>
+				</tr>
+				<tr>
+					<td>
+						<textarea class="large" id="paragraph_es"></textarea>
+					</td>
+					<td>
+						<textarea class="large" id="paragraph_en"></textarea
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

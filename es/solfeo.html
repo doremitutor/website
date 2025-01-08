@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html id="html" lang="es-mx" dir="ltr">
+    <head id="head">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=yes">
+        <meta name="author" content="Jesús Díaz Rodríguez">
+        <meta name="description" content="La voz como instrumento musical mediante el solfeo. Cante con seguridad música escrita nunca antes escuchada por usted aún leyéndola por primera vez.">
+        <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/basic.css">
+        <title>Acerca del Solfeo</title>
+        <script>
+            const PAGE_TYPE = "introduction";
+            const MIRROR_PAGE = "/en/sight-singing";
+            const HEADER = "Acerca del solfeo";
+            const SUBHEADER = "La forma sublime de lectura musical";
+            const PREVIOUS = "/es/notacion";
+            const NEXT = "/es/tension-tonal";
+            const ARTICLE = "/scripts/articles/sightSinging.js";
+            if(window.location.host.endsWith('.com')){
+                import('https://www.googletagmanager.com/gtag/js?id=G-2SYQQHRNMS')
+                .catch(err=>{console.log('Error while importing Analytics: ', err.message);});
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-2SYQQHRNMS');
+            }
+        </script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0501143569623969" crossorigin="anonymous"></script>
+        <script defer src="/scripts/createHTML.js"></script>
+    </head>
+    <body></body>
+</html>

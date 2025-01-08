@@ -1,0 +1,30 @@
+{
+  "name": "Aprendamos solfeo en Doremitutor",
+  "short_name": "¡A solfear!",
+  "description": "Teoría y primeros pasos hacia el solfeo",
+  "categories": "Education",
+  "id": "https://doremitutor.net/es/",
+  "start_url": "https://doremitutor.net/es/bienvenidos",
+  "scope": "/es/",
+  "display": "fullscreen",
+  "theme_color": "#3a2b1c",
+  "background_color": "#ffcc99",
+  "icons": [
+    {
+      "src": "/images/MiniLogo150x150.png",
+      "sizes": "150x150",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/MiniLogo360x360.png",
+      "sizes": "360x360",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/MiniLogo512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+

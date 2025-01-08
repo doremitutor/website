@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=yes">
+        <meta name="author" content="Jesús Díaz Rodríguez">
+		<script>
+			(function(){
+				let lang;
+				let locStore=false;
+				try{
+					if(localStorage.getItem('lang')){
+						lang=localStorage.getItem('lang');
+						locStore=true;
+					}
+				}catch(error){
+					//alert('Sorry, LocalStorage seems disabled,\nnothing to get :(\n'+error+'\nWe still have the browser, let\'s see...');
+				}
+				if(typeof lang === 'undefined'){
+					switch(window.navigator.language.substr(0, 2)){
+						case 'es':
+							lang='es';
+							break;
+						case 'en':
+						default:
+							lang='en';
+							break;
+					}
+					//alert('Browser says "'+lang+'"!');
+				}
+				if(locStore){ //try to save it
+					localStorage.setItem('lang', lang);
+				}
+				let fileName=lang==='es'?'bienvenidos':'welcome';
+				//change to .com before uploading
+				let requestURI=`https://doremitutor.net/${lang}/${fileName}`;
+				window.location.href = requestURI;
+			})();
+		</script>
+	</head>
+    <body></body>
+</html>

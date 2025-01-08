@@ -1,0 +1,31 @@
+*** DON'T USE DOUBLE EXTENSION FILENAMES!!!!! ***
+
+openssl genrsa -out ca.key 2048
+openssl req -x509 -new -nodes -sha512 -days 3650 -subj "/C=MX/ST=Veracruz/L=Veracruz/O=Doremitutor/OU=Development/CN=doremitutor.net CA" -key ca.key  -out ca.crt
+openssl genrsa -out doremitutor.net.key 2048
+openssl req -sha512 -new -subj "/C=MX/ST=Veracruz/L=Veracruz/O=Doremitutor/OU=Development/CN=doremitutor.net" -key doremitutor.net.key -out doremitutor.net.csr
+openssl x509 -req -sha256 -days 3650 -extfile v3.ext -CA ca.crt -CAkey ca.key -CAcreateserial -in doremitutor.net.csr -out doremitutor.net.crt
+openssl x509 -inform PEM -in doremitutor.net.crt -out doremitutor.net.cert
+
+*** DON'T USE DOUBLE EXTENSION FILENAMES!!!!! ***
+
+private key                     keyopenssl genrsa -out doremitutor.net.key 2048
+signing request                 openssl req -key doremitutor.net.key -new -out doremitutor.net.csr
+both                            openssl req -newkey rsa:2048 -keyout doremitutorShort.net.key -out doremitutorShort.net.csr
+self-signed (same key)          openssl x509 -signkey doremitutor.net.key -in doremitutor.net.csr -req -days 365 -out doremitutor.net.crt
+all previous                    openssl req -newkey rsa:2048 -keyout doremitutor.net.key -x509 -days 365 -out doremitutor.net.crt
+CA-signed (private key, s-s)    openssl req -x509 -sha256 -days 1825 -newkey rsa:2048 -keyout rootCA.key -out rootCA.crt
+certification                   openssl x509 -req -CA rootCA.crt -CAkey rootCA.key -in doremitutor.net.csr -out doremitutor.net.crt -days 365 -CAcreateserial -extfile doremitutor.net.ext
+
+*** DON'T USE DOUBLE EXTENSION FILENAMES!!!!! ***
+
+https://devopscube.com/create-self-signed-certificates-openssl/
+
+// Create Certificate Authority
+openssl req -x509 -sha256 -days 356 -nodes -newkey rsa:2048 -subj "/CN=doremitutorCA.net/C=MX/L=Veracruz/S=Veracruz" -keyout rootCA.key -out rootCA.crt
+// Create the Server Private Key
+openssl genrsa -out server.key 2048
+//Certificate Signing Request Configuration: csr.conf
+openssl req -new -key server.key -out server.csr -config csr.conf
+//Certification configuration:ca.conf
+openssl x509 -req -in server.csr -CA rootCA.crt -CAkey rootCA.key -CAcreateserial -out server.crt -days 365 -sha256 -extfile ca.conf

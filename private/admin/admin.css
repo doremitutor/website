@@ -1,0 +1,147 @@
+/* @font-face {
+	font-family: 'roboto';
+	src: url('/css/Roboto-Medium-webfont.woff');
+	src: url('/css/Roboto-Medium-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'roboto';
+	src: url('/css/Roboto-MediumItalic-webfont.woff');
+	src: url('/css/Roboto-MediumItalic-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'roboto';
+	src: url('/css/R/css/Roboto-Black-webfont.woff');
+	src: url('/css/Roboto-Black-webfont.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'roboto';
+	src: url('/css/Roboto-BlackItalic-webfont.woff');
+	src: url('/css/Roboto-BlackItalic-webfont.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+} */
+html{
+	background-color:hsl(30, 80%, 25%);
+	font-size:18px;
+}
+body{
+	color:#000000;	/*30, 100%, 90% #fc9 86.8   */
+	background-color:hsl(30, 80%, 90%);
+	padding:0;
+	margin:0px auto;
+	padding:10px;
+	width:1400px;
+	text-align:center;
+	font-family:/* roboto, */ sans-serif;
+}
+h1 {
+	font-size: 2rem;
+	margin:0 0 0.2rem 0;
+}
+h2{
+	font-size: 1.5rem;
+	margin:0 0 0.5rem 0;
+
+}
+table{
+	width:100%;
+	margin:10px 0;
+	border-collapse: collapse;
+	font-size:0.9rem;
+}
+th, td{
+	border: 1px solid #aaa;
+	padding: 0px;
+	margin:0px;
+	text-align:center;
+	vertical-align:middle;
+}
+tbody th{
+	text-align:left;
+	padding:0 0.2rem;
+}
+td{
+	padding-left:1px;
+}
+textarea{
+	resize:none;
+}
+td input, textarea{
+	width:98.5%	;
+	padding:0.1rem;
+	margin:0px;
+	vertical-align:middle;
+}
+textarea, input[type="text"]{
+	font-size:0.8rem;
+}
+button{
+	color:#009;
+	font-weight:bold;
+	border-color#777;
+	border-width:2px;
+	border-radius:5px;
+	vertical-align:text-bottom;
+}
+.flexWrapperRow{
+	display:flex;
+	flex-direction:row;
+	flex-wrap:nowrap;
+	justify-content:space-between;
+}
+.flexWrapperRow.sectionHeader{
+	justify-content:flex-start;
+}
+.flexWrapperRow > *{
+	display:inline-block;
+}
+.flexWrapperRow > div{
+	text-align:left;
+}
+.flexWrapperCol{
+	display:flex;
+	flex-direction:column;
+	flex-wrap:nowrap;
+	justify-content:space-between;
+}
+.flexWrapperCol label, .flexWrapperCol input{
+	display:block;
+}
+.htmlBlock, .summary{
+	width:500px;
+}
+.consecutive, .ordertype, .previous, .next{
+	width:84px;
+}
+.lesson{
+	width:500px;
+}
+.consecutive, .ordertype, .previous, .next, .lesson, .showPages, .getNextPrev, .showBlocks, .showSummaries,
+.changeConsecutive, .changeBlockName, .changeSummaryName, .deletePage, .deleteBlock, .deleteSummary{
+	margin-right:10px;
+}
+.showPages, .showBlocks, .showSummaries{
+	margin-left:auto;
+}
+.pageVariables{
+	width:auto;
+}
+.pageES, .pageEN, .summaryES, .summaryEN{
+	width:45%;
+}
+.double{
+	text-align:center;
+	padding:0 0.18rem;
+}
+textarea.short{
+	height:50px;
+}
+textarea.large{
+	height:200px;
+}

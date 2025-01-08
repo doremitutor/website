@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html id="html" lang="en-us" dir="ltr">
+    <head id="head">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=yes">
+        <meta name="author" content="Jesús Díaz Rodríguez">
+        <meta name="description" content="Play with this metronome and experience the variation of time in music. Modify the speed of the beats to become familiar with the most commonly used tempos.">
+        <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/basic.css">
+        <link rel="stylesheet" href="/css/extended.css">
+        <title>Beat and Metronome</title>
+        <script>
+            const PAGE_TYPE = "general";
+            const MIRROR_PAGE = "/es/teoria/tiempo/tiempo-y-metronomo";
+            const HEADER = "Time and Metronome";
+            const SUBHEADER = "The fundamental time element and its measurement";
+            const PREVIOUS = "/en/welcome";
+            const NEXT = "/en/theory/time/measure-and-its-marking";
+            const ARTICLE = "/scripts/articles/theory/time/beat-and-metronome.js";
+            if(window.location.host.endsWith('.com')){
+                import("https://www.googletagmanager.com/gtag/js?id=G-9W7N3G01MW")
+                .catch(err=>{console.log('Error while importing Analytics: ', err.message);});
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-9W7N3G01MW');
+            }
+        </script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0501143569623969" crossorigin="anonymous"></script>
+        <script defer src="/scripts/createHTML.js"></script>
+    </head>
+    <body></body>
+</html>

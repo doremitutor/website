@@ -1,0 +1,157 @@
+body{
+	padding-top:10px;
+	grid-template-areas:
+		" logoAndLangWrapper logoAndLangWrapper "
+		" sectionsMenuWrapper sectionsMenuWrapper "
+		" main main "
+		" fastNav fastNav "
+		" sectionContentWrapper sectionContentWrapper "
+		" additionalReadingsWrapper additionalReadingsWrapper "
+		" picturePanel picturePanel "
+		" payPal payPal "
+		" footer footer " ;
+}
+#sectionContentWrapper{
+	grid-area:sectionContentWrapper;
+	display:flex;
+	justify-self:stretch;
+	flex-direction:column;
+	justify-content:flex-start;
+	border:solid 0.1rem var(--dark-color);
+	padding-bottom:0.5rem;
+	margin:0 0.5rem;
+}
+#sectionContentWrapper h3{
+	/* position:absolute;
+	align-self:stretch;
+	margin:0; */
+	/* width:100%; */
+	font-size:1.1rem;
+	font-weight:500;
+	padding:0.1rem 0 0.2rem;
+	color:var(--bg-color);
+	background-color:var(--dark-color);
+}
+#sectionContentWrapper h4{
+	font-size:2rem;
+	text-align:center;
+	/* padding-left:1rem; */
+	cursor:pointer;
+	font-weight:600;
+}
+#sectionContentWrapper menu{
+	display:flex;
+	flex-direction:column;
+	align-items:stretch;
+	padding-left:1rem;
+	overflow-y:auto;
+}
+#sectionContentWrapper menu li{
+	display:inline-block;
+	text-align:left;
+}
+#sectionContentWrapper.lessons li{
+	list-style-type:none;
+}
+#sectionContentWrapper.lessons a{
+	font-size:0.9rem;
+}
+#detailsAside{
+	flex-direction:column;
+}
+@media screen and (max-width:980px){
+	#sectionContentWrapper{
+		max-height:60rem;
+		overflow: scroll;
+	}
+	#sectionContentWrapper h3{
+		font-size:1rem;
+	}
+	#sectionContentWrapper h4{
+		font-size:1rem;
+	}
+	@media (orientation:portrait){
+		body{
+			padding-top:0.3rem;
+		}
+	}
+	@media (orientation:landscape){
+		body{
+			padding-top:10px;
+			grid-template-areas:
+				" logoAndLangWrapper logoAndLangWrapper "
+				" sectionsMenuWrapper sectionsMenuWrapper "
+				" main main "
+				" fastNav fastNav "
+				" sectionContentWrapper picturePanel "
+				" additionalReadingsWrapper additionalReadingsWrapper "
+				" payPal payPal "
+				" footer footer " ;
+		}
+	}
+}
+@media screen and (min-width:981px){
+	body{
+		grid-template-areas:
+			" . logoAndLangWrapper logoAndLangWrapper . "
+			" . sectionsMenuWrapper sectionsMenuWrapper . "
+			" . main main . "
+			" . fastNav fastNav . "
+			" . sectionContentWrapper picturePanel . "
+			" . additionalReadingsWrapper additionalReadingsWrapper . "
+			" . payPal payPal . "
+			" . footer footer . ";
+	}
+	#sectionContentWrapper{
+		border-width:4px;
+		margin: 0;;
+	}
+	#sectionContentWrapper h4{
+		font-size:1rem;
+	}
+}
+@media screen and (min-width:1366px){
+	body{
+		grid-template-areas:
+			" . logoAndLangWrapper logoAndLangWrapper . picturePanel . "
+			" . sectionsMenuWrapper sectionsMenuWrapper . picturePanel . "
+			" . main main . asidePanelRight . "
+			" . fastNav fastNav . asidePanelRight . "
+			" . additionalReadingsWrapper additionalReadingsWrapper . asidePanelRight . "
+			" . payPal payPal . asidePanelRight . "
+			" . footer footer footer footer . ";
+	}
+	#sectionContentWrapper{
+		grid-area:asidePanelRight;
+		/* max-height:920px; */
+	}
+	#sectionContentWrapper menu{
+		/* grid-area:asidePanelRight; */
+		max-height:920px;
+	}
+}
+@media screen and (min-width:1920px){
+	body{
+		grid-template-areas:
+			" . logoAndLangWrapper logoAndLangWrapper logoAndLangWrapper logoAndLangWrapper logoAndLangWrapper logoAndLangWrapper . "
+			" . asidePanelLeft . sectionsMenuWrapper sectionsMenuWrapper . asidePanelRight . "
+			" . asidePanelLeft . main main . asidePanelRight . "
+			" . asidePanelLeft . fastNav fastNav . asidePanelRight . "
+			" . asidePanelLeft . additionalReadingsWrapper additionalReadingsWrapper . asidePanelRight . "
+			" . asidePanelLeft . payPal payPal . asidePanelRight . "
+			" . footer footer footer footer footer footer . ";
+	}
+	#additionalReadingsWrapper{
+		grid-area:additionalReadingsWrapper;
+		height:unset;
+	}
+	#additionalReadingsWrapper menu{
+		flex-direction:row;
+		height:unset;
+	}
+	#sectionContentWrapper{
+		grid-area:asidePanelLeft;
+		margin-top:unset;
+		max-height:1000px;
+	}
+}

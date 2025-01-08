@@ -1,0 +1,150 @@
+body{
+	padding-top:10px;
+	grid-template-areas:
+		" logoAndLangWrapper logoAndLangWrapper "
+		" sectionsMenuWrapper sectionsMenuWrapper "
+		" main main "
+		" fastNav fastNav "
+		" additionalReadingsWrapper additionalReadingsWrapper "
+		" picturePanel picturePanel "
+		" payPal payPal "
+		" footer footer " ;
+}
+#header p{
+	font-size:1.1rem;
+	font-weight:500;
+}
+/* #header p::before{
+	content:'* '
+}
+#header p::after{
+	content:' *'
+} */
+#detailsAside{
+	display:flex;
+}
+#fastNav{
+	grid-area:fastNav;
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	width:100%;
+	padding:0 1rem;
+}
+#fastNav a{
+	font-weight:700;
+}
+#payPal{
+	grid-area:payPal;
+	flex-direction:column;
+	justify-content:flex-start;
+	width:100%;
+}
+#payPal hr{
+	width:90%;
+	border-top:0.1rem solid var(--dark-color);
+	margin:0.5rem auto 0;
+}
+#payPal h3{
+	font-size:1.1rem;
+	font-weight:bold;
+	padding-left:1rem;
+	padding-right:1rem;
+	margin:0.5rem 0 0.25rem;
+}
+#payPal p{
+	font-size:1rem;
+	padding:0 1rem;
+	margin-bottom:1rem;
+}
+#payPal input[type="image"]{
+	width:450px;
+	height:150px;
+}
+#logoAndLangWrapper{
+	flex-direction:row;
+	justify-content:space-between;
+	align-items:center;
+	width:100%;
+	padding:0 20px;
+	background-image:url("/images/LogoAndLangWrapper-bg-980x72.png");
+	background-position: center;
+	background-repeat: no-repeat
+}
+#leaderBoard{
+	display:none;
+}
+@media screen and (max-width:980px){
+	@media (orientation:portrait){
+		body{
+			padding-top:0.3rem;
+		}
+	}
+}
+@media screen and (min-width:981px){
+	body{
+		grid-template-areas:
+			" . logoAndLangWrapper logoAndLangWrapper . "
+			" . sectionsMenuWrapper sectionsMenuWrapper . "
+			" . main main . "
+			" . fastNav fastNav . "
+			" . additionalReadingsWrapper additionalReadingsWrapper . "
+			" . picturePanel picturePanel . "
+			" . payPal payPal . "
+			" . footer footer . ";
+	}
+	#logoAndLangWrapper{
+		align-items:center;
+		padding-right:0.5rem;
+		padding-left:0.5rem;
+		height:120px;
+		background-image:url("/images/LogoAndLangWrapper-bg-1800x120.png");
+	}
+	#additionalReadingsWrapper menu{
+		justify-content:space-around;
+	}
+}
+@media screen and (min-width:1366px){
+	body{
+		grid-template-areas:
+			" . logoAndLangWrapper logoAndLangWrapper . picturePanel . "
+			" . sectionsMenuWrapper sectionsMenuWrapper . picturePanel . "
+			" . main main . asidePanelRight . "
+			" . fastNav fastNav . asidePanelRight . "
+			" . additionalReadingsWrapper additionalReadingsWrapper . asidePanelRight . "
+			" . payPal payPal . asidePanelRight . "
+			" . footer footer footer footer . ";
+	}
+	#picturePanel{
+		grid-area:picturePanel;
+	}
+}
+@media screen and (min-width:1920px){
+	body{
+		grid-template-areas:
+			" . logoAndLangWrapper logoAndLangWrapper logoAndLangWrapper logoAndLangWrapper logoAndLangWrapper logoAndLangWrapper . "
+			" . asidePanelLeft . sectionsMenuWrapper sectionsMenuWrapper . asidePanelRight . "
+			" . asidePanelLeft . main main . asidePanelRight . "
+			" . asidePanelLeft . fastNav fastNav . asidePanelRight . "
+			" . payPal payPal payPal payPal payPal payPal . "
+			" . footer footer footer footer footer footer . ";
+	}
+	#picturePanel{
+		grid-area:asidePanelRight;
+	}
+	#additionalReadingsWrapper{
+		grid-area:asidePanelLeft;
+		height:200px;
+	}
+	#additionalReadingsWrapper menu{
+		padding-left:2rem;
+		flex-direction:column;
+		height:100%;
+	}
+	#leaderBoard{
+		display:inline-block;
+		width:970px;
+		height:90px;
+		/* background-color:blue; */
+	}
+}

@@ -1,0 +1,27 @@
+<svg width="952" height="324" xmlns="http://www.w3.org/2000/svg" >
+  <rect width="952" height="324" fill="rgb(184, 228, 250)" />
+	<text x="17" y="33" fill="rgba(255, 255, 255, 0.7)" font-weight="bold" font-size="30" font-family="serif" font-style="italic" letter-spacing="4">doremitutor.com</text>
+  <text x="871" y="212" fill="rgba(255, 255, 255, 0.5)" font-weight="bold" font-size="150" font-family="serif" text-anchor="middle">5</text>
+  <text x="711" y="212" fill="rgba(255, 255, 255, 0.5)" font-weight="bold" font-size="150" font-family="serif" text-anchor="middle">4</text>
+  <text x="551" y="212" fill="rgba(255, 255, 255, 0.5)" font-weight="bold" font-size="150" font-family="serif" text-anchor="middle">3</text>
+  <text x="391" y="212" fill="rgba(255, 255, 255, 0.5)" font-weight="bold" font-size="150" font-family="serif" text-anchor="middle">2</text>
+  <text x="231" y="212" fill="rgba(255, 255, 255, 0.5)" font-weight="bold" font-size="150" font-family="serif" text-anchor="middle">1</text>
+  <line x1="0" y1="98" x2="952" y2="98" stroke-width="2" stroke="black" />
+  <line x1="0" y1="130" x2="952" y2="130" stroke-width="2" stroke="black" />
+  <line x1="0" y1="162" x2="952" y2="162" stroke-width="2" stroke="black" />
+  <line x1="0" y1="194" x2="952" y2="194" stroke-width="2" stroke="black" />
+  <line x1="0" y1="226" x2="952" y2="226" stroke-width="2" stroke="black" />
+  <line x1="311" y1="98" x2="311" y2="226" stroke-width="2" stroke="black" />
+  <line x1="471" y1="98" x2="471" y2="226" stroke-width="2" stroke="black" />
+  <line x1="631" y1="98" x2="631" y2="226" stroke-width="2" stroke="black" />
+  <line x1="791" y1="98" x2="791" y2="226" stroke-width="2" stroke="black" />
+  <line x1="951" y1="98" x2="951" y2="226" stroke-width="2" stroke="black" />
+  <path d="m 13.09986,204.18414 c 32.33219,1.04097 69.35775,-39.81755 69.87924,-64.8011 0.52148,-30.16243 -17.4698,
+		  -40.33802 -36.76483,-40.33802 -19.29501,0 -33.11441,12.2055 -33.11441,27.84624 0,18.21718 27.11732,
+		  18.47742 27.6388,4.16393 0.5215,-17.22823 -19.55575,-12.07539 -19.39931,-8.30182 0.28684,-25.111079 45.47366,
+		  -29.980266 44.43069,11.16453 -1.30372,47.10439 -52.67018,70.26624 -52.67018,70.26624 z m 93.34616,
+		  -58.03472 a 6.4403622,6.4280597 0 0 1 -6.25785,6.24589 6.4403622,6.4280597 0 0 1 -6.5186,-6.24589 6.4403622,
+		  6.4280597 0 0 1 6.5186,-6.50615 6.4403622,6.4280597 0 0 1 6.25785,6.50615 z m 0,-31.35955 a 6.4403622,
+		  6.4280597 0 0 1 -6.25785,6.42805 6.4403622,6.4280597 0 0 1 -6.5186,-6.42805 6.4403622,6.4280597 0 0 1 6.5186,
+		  -6.40204 6.4403622,6.4280597 0 0 1 6.25785,6.40204 z" fill="rgb(58, 43, 28)"/>
+</svg>

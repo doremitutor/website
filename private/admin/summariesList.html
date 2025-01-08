@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>Existing Summaries</title>
+		<link rel="stylesheet" href="tables.css">
+		<script>
+			window.addEventListener('blur', function(){close();}, false);
+			document.addEventListener('readystatechange', checkRS, false);
+			function checkRS(){
+				if(document.readyState==='complete'){
+					if(opener){
+						opener.fetchSummariesList(true);
+					}		
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th class="summaryName">Summary Name</td>
+				</tr>
+			</thead>
+			<tbody id="tbody"></tbody>
+		</table>
+	</body>
+</html>

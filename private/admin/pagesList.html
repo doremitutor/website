@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>Existing Pages</title>
+		<link rel="stylesheet" href="tables.css">
+		<script>
+			window.addEventListener('blur', function(){close();}, false);
+			document.addEventListener('readystatechange', checkRS, false);
+			function checkRS(){
+				if(document.readyState==='complete'){
+					if(opener){
+						opener.fetchPagesLists(true);
+					}		
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th class="consecutive">Consecutive</td>
+					<th class="spanish">Spanish</td>
+					<th class="english">English</td>
+				</tr>
+			</thead>
+			<tbody id="tbody"></tbody>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,111 @@
+html{
+	background-color: #777;
+	font-family: sans-serif;
+	font-size: 16px;
+}
+body{
+	color:#000000;
+	background-color: #fc9;
+	padding:0;
+	margin:0px auto;
+	width:960px;
+	text-align: center;
+}
+h1 {
+	margin: 0 auto;
+	padding: 0;
+	font-size: 20px;
+}
+h2{
+	padding: 0;
+	font-size: 20px;
+}
+#canvas{
+	display:block;
+	background-image: url("staffPaper952x450.svg");
+	background-repeat: no-repeat;
+	margin: 0 auto;
+	padding: 0;
+	border: none;
+	tab
+}
+form{
+	padding:4px;
+}
+div.lessonNames{
+	width:95%;
+	margin: 0 auto;
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+label.lessonNames{
+	display:flex;
+	justify-content: start;
+	align-items: center;
+	font-size: 20px;
+	padding-left: 5px;
+}
+div.buttons{
+	padding:4px;
+}
+input[type=text]{
+	padding:0px 0px 0px 4px;
+	font-size:16px;
+	font-weight:bold;
+	line-height:26px;
+}
+fieldset{
+	display:inline-block;
+	text-align: left;
+	height:50px;
+	vertical-align:top;
+}
+fieldset.tempo{
+	text-align:center;
+	line-height:0.8;
+}
+span.tempo{
+	font-size:20px;
+	font-weight:bold;
+}
+button{
+	width:160px;
+	height:50px;
+	padding:0px;
+	font-size:18px;
+	font-weight:bold;
+	line-height:18px;
+	border: 2px solid #3a2b1c;
+	border-radius:5px;
+}
+button:disabled{
+	background-color:#aaa;
+}
+.buttonWrapper{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-evenly;
+	margin:4px 0px;
+}
+.indicatorBlock{
+	background-color:#a7f;
+	display:inline-block;
+	vertical-align:top;
+	padding:0px;
+	margin:0px;
+	width:200px;
+}
+.indicatorBlock p{
+	background-color:#cc7;
+	margin: 0 auto;
+	padding: 0;
+	font-size:20px;
+}
+.indicatorBlock > span{
+	background-color:#cc7;
+	display:block;
+}
+span.indicator{
+	background-color:yellow;
+}

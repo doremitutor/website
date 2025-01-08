@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html id="html" lang="es-mx" dir="ltr">
+    <head id="head">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=yes">
+        <meta name="author" content="Jesús Díaz Rodríguez">
+        <meta name="description" content="El verdadero contenido musical de las notas, su tensión tonal. ¿Se ha preguntado cómo es que recordamos tonadas y canciones tan fácilmente?">
+        <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/basic.css">
+        <title>Tensión Tonal</title>
+        <script>
+            const PAGE_TYPE = "introduction";
+            const MIRROR_PAGE = "/en/tonal-tension";
+            const HEADER = "Introducción a la tensión tonal";
+            const SUBHEADER = "La clave para cantar o leer mentalmente la música escrita";
+            const PREVIOUS = "/es/solfeo";
+            const NEXT = "/es/reproductor";
+            const ARTICLE = "/scripts/articles/tonal-tension.js";
+            if(window.location.host.endsWith('.com')){
+                import('https://www.googletagmanager.com/gtag/js?id=G-2SYQQHRNMS')
+                .catch(err=>{console.log('Error while importing Analytics: ', err.message);});
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-2SYQQHRNMS');
+            }
+        </script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0501143569623969" crossorigin="anonymous"></script>
+        <script defer src="/scripts/createHTML.js"></script>
+    </head>
+    <body></body>
+</html>

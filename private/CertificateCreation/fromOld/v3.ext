@@ -1,0 +1,10 @@
+authorityKeyIdentifier=keyid,issuer
+basicConstraints=CA:FALSE
+keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = doremitutor.net
+DNS.2 = www.doremitutor.net
+DNS.3 = doremitutor2.com
+DNS.4 = www.doremitutor2.com

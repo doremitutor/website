@@ -1,0 +1,30 @@
+{
+  "name": "Let's learn sight singing in Doremitutor",
+  "short_name": "Let's sight sing!",
+  "description": "Theory and first steps toward sight singing",
+  "categories": "Education",
+  "id": "https://doremitutor.net/en/",
+  "start_url": "https://doremitutor.net/en/welcome",
+  "scope": "/en/",
+  "display": "fullscreen",
+  "theme_color": "#3a2b1c",
+  "background_color": "#ffcc99",
+  "icons": [
+    {
+      "src": "/images/MiniLogo150x150.png",
+      "sizes": "150x150",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/MiniLogo360x360.png",
+      "sizes": "360x360",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/MiniLogo512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+

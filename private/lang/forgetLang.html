@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es-us" id="html">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+		<title>Forget Lang</title>
+		<script>
+			(function(){
+				try{
+					let lang;
+					if(lang=localStorage.getItem('lang')){
+						localStorage.removeItem('lang');
+						//alert('"'+lang+'" removed!');
+						return;
+					}else{
+						//alert('Already undefined!');
+					}
+				}catch (error){
+					//alert('Sorry, LocalStorage seems disabled,\nnothing to forget :(\n'+error);
+				}
+			})();
+		</script>
+	</head>
+    <body></body>
+</html>

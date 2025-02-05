@@ -39,7 +39,7 @@ function insertHtmlAndStartHead(){
 		<meta http-equiv="Cache-Control" content="private, no-store, must-revalidate" />
 		<meta http-equiv="Pragma" content="no-cache" />
 		<meta http-equiv="Expires" content="0" />
-		<meta name="viewport" content="width=980, user-scalable=yes">
+		<meta name="viewport" content="width=device-width, user-scalable=yes">
 		<meta name="author" content="Jesús Díaz Rodríguez">
 		<meta name="description" content="<?php echo $description;?>">
 		<meta name="keywords" content="<?php echo $keywords;?>">

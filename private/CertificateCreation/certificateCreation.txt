@@ -1,3 +1,11 @@
+*** CheapName ***
+
+// create server key
+openssl req -new -newkey rsa:2048 -nodes -keyout doremitutor_com.key -out doremitutor_com.csr
+
+//
+
+
 *** DON'T USE DOUBLE EXTENSION FILENAMES!!!!! ***
 
 openssl genrsa -out ca.key 2048

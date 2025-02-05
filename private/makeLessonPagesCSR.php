@@ -170,7 +170,7 @@ function createHTML($specs){
 <html id=\"html\" lang=\"{$lang}-us\" dir=\"ltr\">
 	<head id=\"head\">
 		<meta charset=\"UTF-8\">
-		<meta name=\"viewport\" content=\"width=980, user-scalable=yes\">
+		<meta name=\"viewport\" content=\"width=device-width, user-scalable=yes\">
 		<meta name=\"author\" content=\"Jesús Díaz Rodríguez\">
 		<meta name=\"description\" content=\"{$description}\">
 		<link rel=\"icon\" href=\"/images/favicon.ico\" type=\"image/x-icon\">

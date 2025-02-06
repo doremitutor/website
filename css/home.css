@@ -1,3 +1,4 @@
+/* Home pages CSS */
 body {
 	grid-template-areas:
 		"heroContent heroContent"
@@ -35,6 +36,7 @@ body {
 	height:1350px;
 }
 #logoAndLangWrapper {
+	grid-area:hero-content;
 	position:absolute;
 	top:0.25rem;
 	flex-direction:row;

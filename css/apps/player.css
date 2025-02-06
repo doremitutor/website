@@ -1,3 +1,4 @@
+/* Particular CSS support for score pages */
 #playerGrid{
 	display:grid;
 	grid-template-columns:1fr 1fr 1fr;
